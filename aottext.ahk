@@ -190,6 +190,9 @@ winIsShifted := 0
 actuText := ""
 isVMode := 0
 
+windowPosXHidden := 0 
+windowPosYHidden := 0
+
 allfiles := []
 allfilesMaxCount := 0
 
@@ -321,6 +324,7 @@ mainWindow(hide := 0) {
   global alwaysontop, isHidden, aottextHotkey
   global messageText, buttonOK, buttonCANCEL, buttonOKFunction, buttonCANCELFunction, buttonDone
   global buttonVMode
+  global windowPosXHidden, windowPosYHidden, xPercentHidden
   
   Menu, MainMenuUpdate, Add,Check if new version is available, checkUpdate
   Menu, MainMenuUpdate, Add,Start updater, updateApp
@@ -457,6 +461,7 @@ guiMainGuiSize(){
   global isVMode, windowPosVModeX, windowPosVModeY, clientWidthVMode, clientHeightVMode
   global windowWidthVMode, windowHeightVMode
   global widthSCIVMode, heightSCIVMode, clientWidthVMode, clientHeightVMode
+  global windowPosXHidden, windowPosYHidden, xPercentHidden
 
   if (A_EventInfo != 1) {
     if (!winIsShifted){
@@ -486,6 +491,8 @@ guiMainGuiSize(){
         
         WinGetPos,,, windowWidthVMode, windowHeightVMode
       }
+      windowPosXHidden := 0 - coordsAppToScreen(round(A_GuiWidth * xPercentHidden))
+      windowPosYHidden := round(A_ScreenHeight - dpiCorrect * 100)
     }
   }
   
@@ -547,15 +554,14 @@ WM_MOUSEMOVE(wParam, lParam){
 quickHide(){
   global hMain, windowPosX, windowPosY, clientWidth, clientHeight
   global windowWidth, windowHeight
-  global winIsShifted, dpiCorrect, xPercentHidden
+  global winIsShifted, dpiCorrect
   global isVMode, windowPosVModeX, windowPosVModeY
   global windowWidthVMode, windowHeightVMode
+  global windowPosXHidden, windowPosYHidden
 
   if (!winIsShifted){
     saveIfChanged()
     winIsShifted := 1
-    windowPosXHidden := 0 - coordsAppToScreen(round(clientWidth * xPercentHidden))
-    windowPosYHidden := round(A_ScreenHeight - dpiCorrect * 100)
     
     WinMove, ahk_id %hMain%,, windowPosXHidden, windowPosYHidden
     WinSet, Style, -0x10000 -0x80000, ahk_id %hMain%
@@ -569,7 +575,6 @@ quickHide(){
     winIsShifted := 0
     reActivate()
   }
-
   
   return
 }
@@ -577,7 +582,7 @@ quickHide(){
 calcSciPosSize(){
   global sciX, sciY, widthSCI, heightSCI, clientWidth, clientHeight, dpiCorrect, font, fontsize
   
-  sciX := coordsAppToScreen(5)
+  sciX := coordsAppToScreen(10)
   sciY := coordsAppToScreen(18) + fonSizeToPixel(fontsize)
   
   paddingBottom := 20
@@ -949,7 +954,7 @@ saveForced(){
     
     refreshAllfiles()
     
-    sleep, 1000
+    sleep, 2000
   }
 
   return
@@ -1378,17 +1383,12 @@ VModeAction(){
   if (!winIsShifted){
     if (!isVMode){
       isVMode := 1
-      guicontrol,guiMain:, buttonVMode, NMode
-      WinMove, ahk_id %hMain%,, windowPosVModeX, windowPosVModeY, windowWidthVMode, windowHeightVMode
-      
-      sciXShifted := coordsAppToScreen(5)
-      sciYShifted := coordsAppToScreen(5) + 2 * fonSizeToPixel(fontsize)
-      
       widthSCIShifted := windowWidthVMode - coordsAppToScreen(30)
       heightSCIShifted := windowHeightVMode - coordsAppToScreen(120)
-
-      WinMove, ahk_id %hSCI%,, sciXShifted, sciYShifted, widthSCIShifted, heightSCIShifted
-  
+      
+      guicontrol,guiMain:, buttonVMode, NMode
+      WinMove, ahk_id %hMain%,, windowPosVModeX, windowPosVModeY, windowWidthVMode, windowHeightVMode
+      WinMove, ahk_id %hSCI%,, sciX, sciY, widthSCIShifted, heightSCIShifted
     } else {
       isVMode := 0
       guicontrol,guiMain:, buttonVMode, VMode

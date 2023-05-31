@@ -218,7 +218,8 @@ values.</p>
 <tbody>
 <tr class="odd">
 <td>0.050</td>
-<td>new config entry: xPercentHidden</td>
+<td>new config entry: xPercentHidden, quickHideEnabled entry removed
+(allways &quot;on&quot; now)</td>
 </tr>
 <tr class="even">
 <td>0.045</td>
