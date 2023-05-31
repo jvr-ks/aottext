@@ -388,12 +388,13 @@ mainWindow(hide := 0) {
   
   aotStatus := ""
   if (!alwaysontop)
-    aotStatus := " ""Allways on top"" is disabled! "
+    aotStatus := ""
   else
-    aotStatus := " ""Allways on top"" is enabled! "
+    aotStatus := "AOT ON!"
     
-  partSize := round(clientWidth / 2) - 50
-  SB_SetParts(partSize, partSize)
+  partSize1 := round(clientWidth * 0.5)
+  partSize2 := round(clientWidth * 0.3)
+  SB_SetParts(partSize1, partSize2)
   SB_SetText(" " . configFile, 1, 1)
   SB_SetText(" " . aotStatus, 2, 1)
   
@@ -811,10 +812,6 @@ readLastUsed(){
   global configFile, sci, lastUsedFile, saveDir, actualContent
   global allfiles, allfilesMaxCount, alwaysontop, isHidden
   
-  aotStatus := ""
-  if (!alwaysontop)
-    aotStatus := "[AOT is OFF!]"
-  
   if (lastUsedFile != ""){
     filename := pathToAbsolut(saveDir) . lastUsedFile
 
@@ -842,10 +839,6 @@ readLastUsed(){
 readLatest(){
   global configFile, sci, lastUsedFile, saveDir, actualContent
   global allfiles, allfilesMaxCount, alwaysontop
-
-  aotStatus := ""
-  if (!alwaysontop)
-    aotStatus := "[AOT is OFF!]"
     
   lastestFile := allfiles[allfilesMaxCount]
   if (lastestFile != ""){

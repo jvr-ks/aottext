@@ -97,11 +97,7 @@ To hide the Aottext-window use one of the 4 actions:</p>
 </tbody>
 </table>
 <p>Or just close the app (content is auto-saved) and reopen it
-later.<br />
-If the Aottext-window is very small, it is possibly moved out of
-sight.<br />
-Press [Alt] + [a] twice to show it again. Reduce Configuration-file
-&quot;xPercentHidden&quot; value.</p>
+later.</p>
 <h4 id="download">Download</h4>
 <p>Via Updater is the preferred method!<br />
 Portable, run from any directory, but running from a subdirectory of the
@@ -338,7 +334,7 @@ Has no License information!</p>
 <a name="virusscan">  
 
 <h5 id="virusscan-at-virustotal">Virusscan at Virustotal</h5>
-<p><a href="https://www.virustotal.com/gui/url/c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346/detection/u-c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346-1685525822">Virusscan
+<p><a href="https://www.virustotal.com/gui/url/c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346/detection/u-c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346-1685528732">Virusscan
 at Virustotal, aottext.exe 64bit-exe, Check here</a></p>
 </body>
 </html>
