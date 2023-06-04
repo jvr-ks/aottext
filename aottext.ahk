@@ -180,6 +180,12 @@ serverURLExtension := serverURLExtensionDefault
 
 updateServer := serverURL . appnameLower . serverURLExtension
 
+; editarea
+paddingTop := 20
+paddingBottom := 25
+paddingLeft := 5
+paddingRight := 5
+
 syncAppDataRead()
 
 ; runtime variables:
@@ -357,7 +363,7 @@ mainWindow(hide := 0) {
 
   Gui, guiMain:Destroy
   ; -0x30000 -> not minimizable
-  Gui, guiMain:New, HwndhMain -0x30000 +Lastfound +OwnDialogs +Resize, %app%
+  Gui, guiMain:New, HwndhMain -0x30000 +Lastfound +OwnDialogs +Resize , %app%
   
   Gui, guiMain:Font, s%fontsize%, %font%
   Gui, guiMain:Menu, MainMenu
@@ -580,28 +586,27 @@ quickHide(){
 ;-------------------------------- calcSciPosSize --------------------------------
 calcSciPosSize(){
   global sciX, sciY, widthSCI, heightSCI, clientWidth, clientHeight, dpiCorrect, font, fontsize
+  global paddingTop, paddingBottom, paddingLeft, paddingRight
   
-  sciX := coordsAppToScreen(10)
-  sciY := coordsAppToScreen(18) + fonSizeToPixel(fontsize)
+  sciX := coordsAppToScreen(paddingLeft)
+  sciY := coordsAppToScreen(paddingTop) + fonSizeToPixel(fontsize)
   
-  paddingBottom := 20
-  paddingRight := 10
-
-  widthSCI := coordsAppToScreen(clientWidth  - paddingRight)
-  heightSCI := coordsAppToScreen(clientHeight - paddingBottom) - sciY
+  widthSCI := coordsAppToScreen(clientWidth - paddingLeft - paddingRight)
+  heightSCI := coordsAppToScreen(clientHeight - paddingBottom - paddingTop) -fonSizeToPixel(fontsize)
   
   return
 }
 ;-------------------------------- calcSciPosSize --------------------------------
 calcSciPosSizeVMode(){
   global sciX, sciY, widthSCIVMode, heightSCIVMode, clientWidthVMode, clientHeightVMode, dpiCorrect, font, fontsize
+  global paddingTop, paddingBottom, paddingLeft, paddingRight
   
-  sciX := coordsAppToScreen(5)
-  sciY := coordsAppToScreen(5) + 2 * fonSizeToPixel(fontsize)
+  sciX := coordsAppToScreen(paddingLeft)
+  sciY := coordsAppToScreen(paddingTop) + fonSizeToPixel(fontsize)
   
-  widthSCIVMode := coordsAppToScreen(clientWidthVMode - 10 )
+  widthSCIVMode := coordsAppToScreen(clientWidthVMode - paddingLeft - paddingRight )
 
-  heightSCIVMode := coordsAppToScreen(clientHeightVMode * 0.92) - 3 * fonSizeToPixel(fontsize)
+  heightSCIVMode := coordsAppToScreen(clientHeightVMode - paddingBottom - paddingTop) - fonSizeToPixel(fontsize)
   
   return
 }
