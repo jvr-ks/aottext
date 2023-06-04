@@ -76,7 +76,9 @@ if (!A_IsUnicode)
   bit := "A" . bit
 
 bitName := (bit=="64" ? "" : bit)
-app := appName . " " . appVersion . " " . bit . "-bit"
+
+
+app := appName . " " . appVersion . " (" . bit . " bit)"
 
 
 configFileOld := appnameLower . ".ini"
@@ -354,27 +356,24 @@ mainWindow(hide := 0) {
   
 
   Gui, guiMain:Destroy
-  
-  if (alwaysontop)
-    Gui, guiMain:New, HwndhMain -0x30000 +E0x08000000 +Lastfound +OwnDialogs +Resize, %app%
-  else
-    Gui, guiMain:New, HwndhMain -0x30000 +Lastfound +OwnDialogs +Resize, Always on top! %app%
+  ; -0x30000 -> not minimizable
+  Gui, guiMain:New, HwndhMain -0x30000 +Lastfound +OwnDialogs +Resize, %app%
   
   Gui, guiMain:Font, s%fontsize%, %font%
   Gui, guiMain:Menu, MainMenu
   
   Gui, guiMain:Add, StatusBar,
 
-  gui, guiMain:Add, button, x5 VbuttonOK GbuttonOK, ____________
-  gui, guiMain:Add, button, x+m yp+0 VbuttonCANCEL GbuttonCANCEL, ____________
+  Gui, guiMain:Add, button, x5 VbuttonOK GbuttonOK, ____________
+  Gui, guiMain:Add, button, x+m yp+0 VbuttonCANCEL GbuttonCANCEL, ____________
   
   arrow := Chr(0x21A7)
   checkmark := Chr(0x2714)
-  gui, guiMain:Add, button, x+m yp+0 VbuttonDone GinsertDone, %checkmark% %arrow%
-  gui, guiMain:Add, button, x+m yp+0 VbuttonVMode GVModeAction, VMode 
+  Gui, guiMain:Add, button, x+m yp+0 VbuttonDone GinsertDone, %checkmark% %arrow%
+  Gui, guiMain:Add, button, x+m yp+0 VbuttonVMode GVModeAction, VMode 
   
   
-  gui, guiMain:Add, text, x+m yp+0 VmessageText r1, Dynamic button`, has no functionality at the moment!
+  Gui, guiMain:Add, text, x+m yp+0 VmessageText r1, Dynamic button`, has no functionality at the moment!
   
   ; gui show 
   Gui, guiMain:Show, x%windowPosX% y%windowPosY% w%clientWidth% h%clientHeight%
@@ -433,7 +432,6 @@ mainWindow(hide := 0) {
   sci.StyleClearAll()
   
   hSCI := sci.hwnd
-
 
   if (alwaysontop)
     WinSet, AlwaysOnTop,On, ahk_id %hMain%
@@ -1537,11 +1535,11 @@ htmlViewer(forceOnline := 0, url := ""){
   winIsShifted := 1
   gui,guiMain:hide
 
-  gui, htmlViewer:destroy
-  gui, htmlViewer:New,-0x100000 -0x200000 +alwaysOnTop +resize +E0x08000000 hwndhHtmlViewer,Short Help
-  gui, htmlViewer:Add, ActiveX, x0 y0 w%clientWidthHtmlViewer% h%clientHeightHtmlViewer% +VSCROLL +HSCROLL vWB, about:<!DOCTYPE html><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  Gui, htmlViewer:destroy
+  Gui, htmlViewer:New,-0x100000 -0x200000 +alwaysOnTop +resize +E0x08000000 hwndhHtmlViewer,Short Help
+  Gui, htmlViewer:Add, ActiveX, x0 y0 w%clientWidthHtmlViewer% h%clientHeightHtmlViewer% +VSCROLL +HSCROLL vWB, about:<!DOCTYPE html><meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  gui, htmlViewer:Add, StatusBar
+  Gui, htmlViewer:Add, StatusBar
   SB_SetParts(400,300)
   SB_SetText("Use CTRL + mousewheel to zoom in/out!", 1, 1)
 
@@ -1572,7 +1570,7 @@ htmlViewer(forceOnline := 0, url := ""){
     WB.Navigate(url)
   }
 
-  gui, htmlViewer:Show, center
+  Gui, htmlViewer:Show, center
   
   return
 }
