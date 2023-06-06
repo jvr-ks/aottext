@@ -362,7 +362,7 @@ mainWindow(hide := 0) {
   
 
   Gui, guiMain:Destroy
-  ; -0x30000 -> not minimizable
+  ; -0x30000 -> not minimizable, +E0x08000000 -> not in tasklist
   Gui, guiMain:New, HwndhMain -0x30000 +E0x08000000 +Lastfound +OwnDialogs +Resize , %app%
   
   Gui, guiMain:Font, s%fontsize%, %font%
