@@ -68,7 +68,7 @@ if (hasParams != 0){
 appName := "Aottext"
 appnameLower := "aottext"
 extension := ".exe"
-appVersion := "0.050"
+appVersion := "0.051"
 
 bit := (A_PtrSize==8 ? "64" : "32")
 

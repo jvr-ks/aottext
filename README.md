@@ -9,7 +9,7 @@ A "one sticky note" staying always on top (Windows > 10, 64 bit only).
 - autosaves if content is changed \*1), always to a new file,  
 - manual save (tagging) possible ("Save"-button),  
 - history function (Alt-key + mousewheel),  
-- zoom with Ctrl + mousewheel (default fontsize is defined in the config-file).   
+- zoom with Ctrl + mousewheel (default fontsize is defined in the configuration-file).   
  
 All content is kept in memory, so not suitable for very large files.  
 If the menu-buttons get deactivated by the operating-system, 
