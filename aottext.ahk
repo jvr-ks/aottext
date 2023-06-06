@@ -363,7 +363,7 @@ mainWindow(hide := 0) {
 
   Gui, guiMain:Destroy
   ; -0x30000 -> not minimizable
-  Gui, guiMain:New, HwndhMain -0x30000 +Lastfound +OwnDialogs +Resize , %app%
+  Gui, guiMain:New, HwndhMain -0x30000 +E0x08000000 +Lastfound +OwnDialogs +Resize , %app%
   
   Gui, guiMain:Font, s%fontsize%, %font%
   Gui, guiMain:Menu, MainMenu
