@@ -454,6 +454,83 @@ mainWindow(hide := 0) {
   
   WinGetPos,,, windowWidth, windowHeight
   
+  Hotkey, IfWinActive, %appname%
+  Hotkey, ^f, findText
+  
+  return
+}
+;--------------------------------- findText ---------------------------------
+findText(){
+  global hMain, hEnterFindText, enterFindText
+  
+  fgColor := "cffffff", bgColor := "a900ff"
+
+  Gui, enterFindText:new, HWNDhEnterFindText +parentGuiMain +ownerGuiMain +0x80000000
+  Gui, enterFindText:Color, %bgColor%
+  Gui, enterFindText:Font, %fgColor%
+  ;Gui, enterFindText:Add, Text,, Please enter the search-text:
+  Gui, enterFindText:Add, Text,, Sorry`, text-search is under construction!
+  Gui, enterFindText:Font, "c000000"
+  Gui, enterFindText:Add, Edit, w200 VenterFindText
+  Gui, enterFindText:Add, Button, GenterFindTextOk, OK
+  Gui, enterFindText:-Caption
+  Gui, enterFindText:+ToolWindow
+  Gui, enterFindText:+AlwaysOnTop
+  Gui, enterFindText:Show
+  WinCenter(hMain, hEnterFindText, 1)
+
+  return
+}
+;------------------------------ enterFindTextOk ------------------------------
+enterFindTextOk(){
+  global enterFindText
+
+  Gui, enterFindText:submit
+  Gui, enterFindText:Destroy
+  
+; Sci_TextToFindFull
+; SCI_FINDTEXTFULL(int searchFlags, Sci_TextToFindFull *ft) → position
+; searchFlags -> SCFIND_NONE -> 0x0
+; This structure extends Sci_TextToFind to support huge documents on Win32.
+
+; struct Sci_TextToFindFull {
+    ; struct Sci_CharacterRangeFull chrg;     // range to search
+    ; const char *lpstrText;                // the search pattern (zero terminated)
+    ; struct Sci_CharacterRangeFull chrgText; // returned as position of matching text
+; }
+
+; struct Sci_CharacterRange {
+    ; long cpMin;
+    ; long cpMax;
+; }
+
+; struct Sci_TextRange {
+    ; struct Sci_CharacterRange chrg;
+    ; char *lpstrText;
+; }
+
+
+  ; msgbox, %enterFindText%
+  
+
+  ; VarSetCapacity(characterRange, 0)
+  
+  ; NumPut(0, characterRange , 0, Int64)
+  ; l := StrLen(actualContent) * 2
+  ; NumPut(l, characterRange , 64, Int64)
+  
+  ; VarSetCapacity(findStruct, 0)
+  
+  ; NumPut(Number, findStruct , Offset, Type)
+  
+  ; GrantedCapacity := VarSetCapacity(TargetVar , RequestedCapacity, FillByte)
+  ; NumPut(Number, VarOrAddress , Offset, Type)
+  ; Number := NumGet(VarOrAddress , Offset, Type)
+  
+  ; pos := SCI_FINDTEXTFULL(0x0, findStruct)
+  
+  ; sci.GOTOPOS(pos)
+
   return
 }
 ;------------------------------ guiMainGuiSize ------------------------------
@@ -1200,7 +1277,7 @@ hideFor30End(){
 }
 ;------------------------------- hotkeyPressed -------------------------------
 hotkeyPressed(){
-  ; hotkey
+  ; hotkey: "Alt + a" is default
   global hMain, windowPosX, windowPosY
   global winIsShifted, alwaysontop, isHidden
   
@@ -1686,6 +1763,31 @@ buttonCANCEL(){
   %buttonCANCELFunction%()
 
   return
+}
+;--------------------------------- WinCenter ---------------------------------
+; from: https://www.autohotkey.com/board/topic/92757-win-center/
+WinCenter(hMain, hChild, Visible := 1) {
+    DetectHiddenWindows On
+    WinGetPos, X, Y, W, H, ahk_ID %hMain%
+    WinGetPos, _X, _Y, _W, _H, ahk_ID %hChild%
+    If Visible {
+        SysGet, MWA, MonitorWorkArea, % WinMonitor(hMain)
+        X := X+(W-_W)//2, X := X < MWALeft ? MWALeft+5 : X, X := (X + _W) > MWARight ? MWARight-_W-5 : X
+        Y := Y+(H-_H)//2, Y := Y < MWATop ? MWATop+5 : Y, Y := (Y + _H) > MWABottom ? MWABottom-_H-5 : Y
+    } Else X := X+(W-_W)//2, Y := Y+(H-_H)//2
+    WinMove, ahk_ID %hChild%,, %X%, %Y%
+    WinShow, ahk_ID %hChild%
+    }
+;-------------------------------- WinMonitor --------------------------------
+WinMonitor(hwnd, Center := 1) {
+    SysGet, MonitorCount, 80
+    WinGetPos, X, Y, W, H, ahk_ID %hwnd%
+    Center ? (X := X+(W//2), Y := Y+(H//2))
+    loop %MonitorCount% {
+      SysGet, Mon, Monitor, %A_Index%
+      if (X >= MonLeft && X <= MonRight && Y >= MonTop && Y <= MonBottom)
+          Return A_Index
+    }
 }
 ;------------------------------- exitAndReload -------------------------------
 exitAndReload(){
