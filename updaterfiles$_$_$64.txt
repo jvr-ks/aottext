@@ -1,0 +1,9 @@
+aottext.exe,yes,overwrite
+license.txt,no
+Scintilla.dll,no
+shorthelp.html
+readme.html
+
+
+
+
