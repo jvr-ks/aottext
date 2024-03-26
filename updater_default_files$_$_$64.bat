@@ -1,12 +1,12 @@
 @rem updater_default_files$_$_$64.bat
 
-copy /Y "aottext.exe" "aottext.exe.default"
+xcopy /y /f "aottext.exe" "aottext.exe.default"
 
-copy /Y "license.txt" "license.txt.default"
+xcopy /y /f "license.txt" "license.txt.default"
 
-copy /Y "Scintilla.dll" "Scintilla.dll.default"
+xcopy /y /f "Scintilla.dll" "Scintilla.dll.default"
 
-copy /Y "shorthelp.html" "shorthelp.html.default"
+xcopy /y /f "shorthelp.html" "shorthelp.html.default"
 
-copy /Y "readme.html" "readme.html.default"
+xcopy /y /f "readme.html" "readme.html.default"
 

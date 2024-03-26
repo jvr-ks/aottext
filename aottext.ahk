@@ -102,7 +102,7 @@ fontSCIDefault := "Segoe UI"
 fontsizeSCIDefault := 10
 alwaysontopDefault := 1
 autohideDefault := 1
-mwheelModifierDefault := "Alt"
+mwheelModifierDefault := "!"
 aottextHotkeyDefault := "!a"
 ; Hardcoded (TODO):
 quickHideHotkeyDefault := "LShift & RButton"
@@ -234,6 +234,12 @@ readLastUsed()
 OnMessage(0x200,"WM_MOUSEMOVE")
 OnMessage(0x03,"WM_MOVE")
 
+;wDown := mwheelModifier . "WheelDown"
+;wUp := mwheelModifier . "WheelUp"
+
+;hotkey, %wDown%, historyFoward
+;hotkey, %wUp%, historyBackward
+
 LShift & RButton::
 {
   quickHide()
@@ -302,7 +308,7 @@ checkDirectories(){
   dir := pathToAbsolut(trashDir)
   if (!FileExist(dir))
     FileCreateDir, %dir%
-
+  
   return 
 }
 ;----------------------------- coordsScreenToApp -----------------------------
@@ -1107,6 +1113,7 @@ pathToAbsolut(p){
 }
 ;---------------------------- WheelUp / WheelDown ----------------------------
 Alt & WheelDown::
+;historyFoward() 
 {
   global allfiles, savedir, wheelPosition, allfilesMaxCount, newContent, actualContent
   
@@ -1133,13 +1140,14 @@ Alt & WheelDown::
      wheelPosition := allfilesMaxCount
     }
   } else {
-    showMessage("No files found in: `"" . savedir . "`"")
+    showMessage("No files found in: " . savedir)
   }
   
   return
 }
 ;------------------------------- Alt & WheelUp -------------------------------
 Alt & WheelUp::
+;historyBackward() 
 {
   global allfiles, savedir, wheelPosition, allfilesMaxCount, newContent, actualContent
   
