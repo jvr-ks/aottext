@@ -1,0 +1,10 @@
+aottext.exe,yes,overwrite
+license.txt,no
+scintilla.dll,yes,overwrite
+lexer.dll,yes,overwrite
+shorthelp.html,yes,overwrite
+readme.html,yes,overwrite
+insertUnicode.txt,yes
+
+
+
