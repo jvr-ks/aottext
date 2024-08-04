@@ -313,113 +313,117 @@ Autohotkey version 1.0 ...</p>
 </thead>
 <tbody>
 <tr class="odd">
+<td>0.017</td>
+<td>Lexer enabled (AHK code)</td>
+</tr>
+<tr class="even">
 <td>0.015</td>
 <td>Each mode has a text wrap configuration of its own (especially
 useful in the VMode).</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.013</td>
 <td>Conf. file location changed, &quot;Setup&quot; renamed to &quot;Settings&quot;</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.011</td>
 <td>Added transparency to SMode, removed Configfile backup mechanism,
 Shift + Mousewheel instead of Alt + Mousewheel</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.005</td>
 <td>&quot;Hide&quot; renamed to &quot;SMode&quot;, [Right-mousebutton] both operations
 changed to &quot;toggle&quot;</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.002</td>
 <td>Quick-Hide mouse-hotkeys changed (hardcoded): LShift &amp; RButton
 -&gt; HIDE, LControl &amp; RButton -&gt; SHOW (NMode)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.001</td>
 <td>File-history hotkey changed to LShift &amp; WheelUp / LShift &amp;
 WheelDown</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.001</td>
 <td>Reset version to &quot;0.001&quot; (Upgraded Aottext from AHK1 to AHK2)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.055</td>
 <td>Fileencoding changed to UTF-8-BOM (configfile: UTF-16 LE-BOM), new
 menu entry: &quot;Insert&quot;</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.054</td>
 <td>Gui size not overwritten if maximized</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.053</td>
 <td>Menu -&gt; setup -&gt; Autosmall</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.050</td>
 <td>new config entry: xPercentHidden, quickHideEnabled entry removed
 (allways &quot;on&quot; now)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.045</td>
 <td>Autosave filename changed from &quot;aottext_yyyyMMddhhmmss&quot; to
 &quot;aot_yyyyMMddhhmmss&quot;, button &quot;YmaxXr&quot;</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.044</td>
 <td>Lost focus bug fixed</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.043</td>
 <td>Bug (did not save new content) fixed</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.042</td>
 <td>Always using a localized Configurationfile, i.e.
 &quot;aottext_COMPUTERNAME.ini&quot;</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.041</td>
 <td>The Configurationfile -&gt; quickhideHotkey is hardcoded and not
 changeable.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.040</td>
 <td>Configurationfile changed! Delete the old one, a corrected new one
 will be created automatically!</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.029</td>
 <td>To trash button, moves the actual file to the &quot;_trash&quot;
 subdirectory!</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.028</td>
 <td>Startparameter: hidewindow and remove</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.027</td>
 <td>QuickHide enabled by default</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.026</td>
 <td>A hotkey to hide / show the Aottext-window, Configurationfile -&gt;
 [config] -&gt; aottextHotkey, default is [Alt] + [a] (&quot;!a&quot;)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.022</td>
 <td>Configurationfile changed! Delete the old one, a corrected new one
 will be created automatically!</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.021</td>
 <td>Configurationfile -&gt; [config] -&gt; saveDir=&quot;absolute paths are
 allowed&quot;</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.001</td>
 <td>under construction</td>
 </tr>
@@ -470,7 +474,7 @@ Has no License information!</p>
 <a name="virusscan">  
 
 <h5 id="virusscan-at-virustotal">Virusscan at Virustotal</h5>
-<p><a href="https://www.virustotal.com/gui/url/c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346/detection/u-c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346-1718100022">Virusscan
+<p><a href="https://www.virustotal.com/gui/url/c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346/detection/u-c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346-1719062248">Virusscan
 at Virustotal, aottext.exe 64bit-exe, Check here</a></p>
 </body>
 </html>
