@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">html {color: #1a1a1a;background-color: #fdfdfd;}body {margin: 0 auto;padding-left: 20px;padding-right: 20px;padding-top: 20px;padding-bottom: 20px;hyphens: auto;overflow-wrap: break-word;text-rendering: optimizeLegibility;font-kerning: normal;h1 {font-size: 1.2em;}}@media (max-width: 600px) {body {font-size: 0.9em;padding: 12px;}h1 {font-size: 1.8em;}}@media print {html {background-color: white;}body {background-color: transparent;color: black;font-size: 12pt;}p, h2, h3 {orphans: 3;widows: 3;}h2, h3, h4 {page-break-after: avoid;}}p {margin: 1em 0;}a {color: #1a1a1a;}a:visited {color: #1a1a1a;}img {max-width: 100%;}h1, h2, h3, h4, h5, h6 {margin-top: 0.4em;}h5, h6 {font-size: 1em;font-style: italic;}h6 {font-weight: normal;}ol, ul {padding-left: 1.7em;margin-top: 1em;}li > ol, li > ul {margin-top: 0;}blockquote {margin: 1em 0 1em 1.7em;padding-left: 1em;border-left: 2px solid #e6e6e6;color: #606060;}code {font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;font-size: 85%;margin: 0;hyphens: manual;}pre {margin: 1em 0;overflow: auto;}pre code {padding: 0;overflow: visible;overflow-wrap: normal;}.sourceCode {background-color: transparent;overflow: visible;}hr {background-color: #1a1a1a;border: none;height: 1px;margin: 1em 0;}table {margin: 1em 0;border-collapse: collapse;width: 100%;overflow-x: auto;display: block;font-variant-numeric: lining-nums tabular-nums;}table caption {margin-bottom: 0.75em;}tbody {margin-top: 0.5em;border-top: 1px solid #1a1a1a;border-bottom: 1px solid #1a1a1a;}th {border-top: 1px solid #1a1a1a;padding: 0.25em 0.5em 0.25em 0.5em;}td {padding: 0.125em 0.5em 0.25em 0.5em;}header {margin-bottom: 4em;text-align: center;}#TOC li {list-style: none;}#TOC ul {padding-left: 1.3em;}#TOC > ul {padding-left: 0;}#TOC a:not(:hover) {text-decoration: none;}code{white-space: pre-wrap;}span.smallcaps{font-variant: small-caps;}div.columns{display: flex; gap: min(4vw, 1.5em);}div.column{flex: auto; overflow-x: auto;}div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}ul.task-list{list-style: none;}ul.task-list li input[type="checkbox"] {width: 0.8em;margin: 0 0.8em 0.2em -1.6em;vertical-align: middle;}.display.math{display: block; text-align: center; margin: 0.5rem auto;}table{background-color:#fafafa}table tr td,.haroopad table tr th{border:1px solid #e6e6e6}table tr:nth-child(2n){background-color:#f2f2f2}h1 {font-size: 20px;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">README</h1>
+</header>
+<h1 id="aottext-icon">Aottext <img src="data:image/vnd.microsoft.icon;base64,AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/zJn/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn/AAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf//zJn/AAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn/AAAAAAAAAAD/zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAP/Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn/AAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAA/8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn/AAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAP/Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn/AAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAP/Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAD/zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAP/Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAD/zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAD/zJn//8yZ///Mmf//zJn/AAAAAP/Mmf//zJn//8yZ///Mmf//zJn//8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Mmf//zJn//8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf//zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/8yZ///Mmf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/zJn//8yZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/AAAAAAAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/AAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8A+U3/AAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/AAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/AAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/AAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8A+U3/AAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wAAAAAAAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/AAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAPlN/wD5Tf8A+U3/APlN/wD5Tf8A+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+U3/APlN/wD5Tf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////////yBP////////IE////////8gT////////yBP////////IE////////8gT9/3////fyBOB4Bw8HgfIEwHADBw8B8gTAYAOGDwHyBMPB/8IfD/IEw8P/wB8P8gTDwAHgPw/yBMPAAeB/D/IEw8AB4D8P8gTDw+HAPw/yBMPhw8IfD/IEAGADgwwB8gQAcAcHDAHyBAB4DweEAfIEw/////8P8gTD/////w/yBMP/////D/IE8//////P8gT////////yBP////////IE////////8gT////////yBP////////IE/wA+A/g/8gT+ADwB8B/yBP44OHDx//IE/jw4+PH/8gT+PDj48f/yBP4cOPhx//IE/wA4+HH/8gT/wDj4cf/yBP/8OPjx//IE/jw4+PH/8gT+HDhw8f/yBP8AfAHAP/IE/4D+A8A/8gT/////8f/yBP/////x//IE//////H/8gT/////8f/yBP////////IE////////8gQ=" alt="Icon" /></h1>
+<h3 id="status-of-version-2-beta-test">Status of version 2: BETA
+test</h3>
+<h4 id="description">Description</h4>
+<p>A &quot;one sticky note&quot; staying always on top (Windows &gt; 10, 64 bit
+only).</p>
+<ul>
+<li><p>can show the content in 3 different window positions:</p></li>
+<li><ul>
+<li>normal mode: at the bottom of the screen,</li>
+</ul></li>
+<li><ul>
+<li>vertical mode: on the right side vertically oriented,</li>
+</ul></li>
+<li><ul>
+<li>small mode: on the left side screen bottom with reduced heigth
+(return to normal mode with mousover the editarea)</li>
+</ul></li>
+<li><p>takes less spaces on the desktop,</p></li>
+<li><p>autosaves if content is changed *1), always to a new
+file,</p></li>
+<li><p>manual save (tagging) possible (&quot;Save&quot;-button),</p></li>
+<li><p>history function (Shift-key + mousewheel),</p></li>
+<li><p>zoom with Ctrl + mousewheel (default FontSize is defined in the
+Configurationfile: &quot;guiMainEditFontSize&quot;).</p></li>
+</ul>
+<p>All content is kept in memory, so not suitable for very large
+files.<br />
+Aottext is excluded from the tasklist (if &quot;Autosmall&quot; is enabled).</p>
+<p>*1) Content is saved if it was changed and:</p>
+<ul>
+<li>on any &quot;hide&quot;-operation,</li>
+<li>on exiting the app.</li>
+<li>by pressing the &quot;Save&quot;-button.<br />
+(&quot;Save&quot;-button saves the content regardless of whether it has been
+changed or not).</li>
+</ul>
+<h4 id="aottext-usage">Aottext usage</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Key(s) / Button</th>
+<th>Operation</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[SMode] button</td>
+<td>&quot;small&quot; position</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>[NMode] button</td>
+<td>&quot;normal&quot; position</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>[VMode] button</td>
+<td>&quot;vertical&quot; position</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>[Exit] button</td>
+<td>close the app (content is auto-saved) and reopen it later. :-)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>[Mouseover] edit field</td>
+<td>return to &quot;NMode&quot;</td>
+<td>if &quot;SMode&quot; is active</td>
+</tr>
+<tr class="even">
+<td>[Left-shift] + [Right-mousebutton]</td>
+<td>toggle &quot;NMode&quot; - &quot;SMode&quot;</td>
+<td>pressed anywere on the screen</td>
+</tr>
+<tr class="odd">
+<td>[Control] + [Right-mousebutton]</td>
+<td>toggle &quot;NMode&quot; - &quot;VMode&quot;</td>
+<td>pressed anywere on the screen</td>
+</tr>
+<tr class="even">
+<td>[Alt] + [a]</td>
+<td>toggle hide/show Aottext</td>
+<td>always returns to &quot;NMode&quot;</td>
+</tr>
+<tr class="odd">
+<td>[Shift] + [Mouswheel]</td>
+<td>content history</td>
+<td>browse through all files</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hide-the-aottext-window-autosmall">Hide the Aottext window:
+Autosmall</h4>
+<p>If &quot;Op&quot; -&gt; &quot;Settings&quot; -&gt; &quot;Autosmall&quot; is selected,<br />
+the Aottext-window is automatically moved/resized to the
+&quot;SMode&quot;-position,<br />
+if it is <strong>out of focuss</strong>.</p>
+<h4 id="enable-unicode-utf-8">Enable Unicode UTF-8</h4>
+<p>To use the full Unicode characterset, enable UTF-8 support in
+Windows:<br />
+<a href="https://www.jvr.de/2022/07/30/unicode-in-console-windows-10-en_us/">Enable
+Unicode UTF-8 (Windows 10)</a></p>
+<h4 id="file-history">File history</h4>
+<p>Inspecting all existing files in the &quot;_saved&quot;-directory by using
+Shift + Mousewheel Up/Down,<br />
+independent of the mouseposition on the screen!<br />
+Any changes made are always written to a <strong>new</strong> file!</p>
+<h4 id="file-encoding">File Encoding</h4>
+<p>UTF-8 BOM (besides &quot;*.ini&quot; files)</p>
+<h4 id="autosave">Autosave</h4>
+<p>Any changes made are always written automatically to a
+<strong>new</strong> file!,<br />
+if Shift + Mousewheel is used or when Aottext is exiting.<br />
+The &quot;Save&quot;-button does this immediatedly, even if the content has not
+changed, but always to a new file!</p>
+<h4 id="line-wrapping">Line wrapping</h4>
+<p>To switch off line wrapping, each mode has a wrap configuration of
+its own, &quot;Settings&quot; ➝ &quot;NoWrapNMode&quot; etc. (especially useful in the
+VMode).</p>
+<h4 id="reactivate-window">reActivate Window</h4>
+<p>Sometimes the operating system takes away the focus of Aottext
+(Titlebar changes the color).<br />
+If the mouse is moved over the Aottext text edit field (not the
+title-bar),<br />
+the focus is reactivated to Aottext.</p>
+<h4 id="hotkeys--mousemove-modifiers">Hotkeys / Mousemove-modifiers</h4>
+<p>Hide/Show Aottext hotkey is [ALT] + [a] (default).<br />
+Set: Configurationfile -&gt; [config] -&gt; aottextHotkey=&quot;!a&quot;</p>
+<ul>
+<li><strong>Quick-Hide mouse-hotkey is [Ctrl] + [RButton]
+(hardcoded)</strong></li>
+<li><strong>Quick-Show mouse-hotkey is [LShift] + [RButton]
+(hardcoded)</strong></li>
+</ul>
+<p><a href="https://github.com/jvr-ks/aottext/blob/main/hotkeys.md">Overview
+of all default Hotkeys used by my Autohotkey &quot;tools&quot;</a></p>
+<h4 id="menu-button-totrash">Menu button &quot;ToTrash&quot;</h4>
+<p>Immediately moves the actual selected file to the &quot;_trash&quot;
+subdirectory,<br />
+without any confirmation request.</p>
+<h4 id="menu-button-insert">Menu button &quot;Insert&quot;</h4>
+<p>The file insertUnicodeFile (default is &quot;insertUnicode.txt&quot; as defined
+in the Configuration file) contains name | value pairs (characters to
+insert into the text).<br />
+If an entry is selected, it is copied to the clipboard.<br />
+If you did not change the file name in the Configuration file and the
+project &quot;Unicodetable&quot; is installed (located)<br />
+in the sibling directory &quot;..\unicodetable&quot;,<br />
+the file &quot;..\unicodetable\insertUnicode.txt&quot; is used instead.<br />
+This way Aottext uses the list made with &quot;Unicodetable.exe&quot;.</p>
+<h4 id="hints">Hints</h4>
+<p>-&quot;Save&quot; button:<br />
+The filename is generated from the current time with a resolution of one
+second.<br />
+Do not press the &quot;Save&quot;-button more than once in less than a second, or
+you&#39;ll get an error-message then!<br />
+Make sure that the date/time of your computer have the correct
+values.</p>
+<h4 id="fonts">Fonts</h4>
+<p>The font used in the text is seletable (&quot;Setting&quot; → &quot;Font of
+text&quot;).<br />
+At the top of the font list are some prefered fonts, change them by
+editing the Configurationfile<br />
+section &quot;[preferedFonts]&quot;,<br />
+entries:<br />
+preferredFont1=&quot;Consolas&quot; *1)<br />
+preferredFont2=&quot;Noto colored emoji&quot;<br />
+preferredFont3=&quot;OCR-A BT&quot;<br />
+...<br />
+up to 20</p>
+<p>The selected font and size are saved in the Configurationfile →;
+[config] guiMainEditFontName=&quot;Consolas&quot;<br />
+and Configurationfile → [config] guiMainEditFontSize=10</p>
+<p>The menu is using Windows menus, changing the font would change the
+font of all other apps (menus) too!</p>
+<p>*1) Drawback of the &quot;Consolas&quot; font is its ugly Smiley character: &quot;☺&quot;
+should be: 😊</p>
+<h4 id="configuration-file">Configuration file</h4>
+<p>(<strong>Changed from version &gt;= 0.015</strong>)</p>
+<p>The Configuration file is &quot;aottext.ini&quot;.<br />
+(For development and test purposes the file &quot;_aottext.ini&quot; may be use,
+which takes precedence).</p>
+<p>There are two menu-buttons to edit the Configurationfile:<br />
+&quot;Menu&quot; -&gt; &quot;Op&quot; -&gt; &quot;Settings&quot; -&gt; &quot;Edit Config&quot;<br />
+&quot;Menu&quot; -&gt; &quot;Op&quot; -&gt; &quot;Settings&quot; -&gt; &quot;Edit Config (external
+editor)&quot;</p>
+<h4 id="startparameter">Startparameter</h4>
+<ul>
+<li><strong>hidewindow</strong>, if the app is started with windows,
+this parameter hides the app-window upon the windows start,<br />
+use the hotkey to open the app then.</li>
+<li><strong>remove</strong>, removes &quot;aottext.exe&quot; from memory.</li>
+</ul>
+<h4 id="start-installation--update">Start installation / update:</h4>
+<ul>
+<li>Run &quot;updater.exe&quot;, example: &quot;C:\jvrks\aottext\updater.exe&quot; once to
+download/update aottext.<br />
+(Menu -&gt; Op -&gt; Update -&gt; Start updater)</li>
+<li>Then start &quot;aottext.exe&quot;, example: &quot;C:\jvrks\aottext\aottext.exe&quot;
+!</li>
+<li>Create a desktop-icon and/or a taskbar entry.<br />
+Hint: <strong>To create a taskbar entry, &quot;Autosmall&quot; must be switched
+off temporarily (Menu -&gt; Op -&gt; Settings -&gt;
+Autosmall)</strong><br />
+(&quot;Autosmall&quot; does not hide the window but activates the small
+mode!)</li>
+</ul>
+<h4 id="first-start-onetime-layout-finetune">First start onetime layout
+finetune:</h4>
+<p>The default layout looks like this:</p>
+<pre><code>                                                                                   VMode   
+                                                                                   ┌──────┐
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                                                                   │      │
+                                              NMode                                │      │
+                                             ┌───────────────────┐                 │      │
+                                             │                   │                 │      │
+                                             │                   │                 │      │
+                                             │                   │                 │      │
+                                             │                   │                 │      │
+ SMode                                       │                   │                 │      │
+┌───────────────────────────┐                │                   │                 └──────┘
+└───────────────────────────┘                └───────────────────┘                         
+  </code></pre>
+<p>Please resize / reposition the window in each position (&quot;NMode&quot;,
+&quot;VMode&quot; and &quot;SMode&quot;) once.</p>
+<h4 id="download">Download</h4>
+<p>Via &quot;Updater&quot; is the preferred method!<br />
+Portable, run from any directory, but running from a subdirectory of the
+windows programm-directories<br />
+(C:\Program Files, C:\Program Files (x86) etc.)<br />
+requires admin-rights and is not recommended!<br />
+<strong>Installation-directory (is created by the Updater) must be
+writable by the app!</strong></p>
+<p>To download <strong>aottext.exe</strong> 64 bit Windows from Github
+please use:</p>
+<p><a href="https://github.com/jvr-ks/aottext/raw/main/updater.exe">updater.exe
+64bit</a></p>
+<p>(Updater viruscheck please look at the <a href="https://github.com/jvr-ks/updater">Updater repository</a>)</p>
+<ul>
+<li>From time to time there are some false positiv virus
+detections<br />
+<a href="#virusscan">Virusscan</a> at Virustotal see below.</li>
+</ul>
+<h4 id="sourcecode">Sourcecode</h4>
+<p><a href="https://github.com/jvr-ks/aottext">Sourcecode at Github</a>,
+&quot;aottext.ahk&quot; an <a href="https://www.autohotkey.com">Autohotkey</a>
+script.<br />
+Uses the <a href="https://www.scintilla.org/">Scintilla</a> Textcontrol
+(Scintilla.dll).<br />
+Block move with tab: Indentation is 2 spaces (fixed). Made with
+Autohotkey version 1.0 ...</p>
+<h4 id="latest-changes">Latest changes:</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Version (&gt;=)</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.017</td>
+<td>Lexer enabled (AHK code)</td>
+</tr>
+<tr class="even">
+<td>0.015</td>
+<td>Each mode has a text wrap configuration of its own (especially
+useful in the VMode).</td>
+</tr>
+<tr class="odd">
+<td>0.013</td>
+<td>Conf. file location changed, &quot;Setup&quot; renamed to &quot;Settings&quot;</td>
+</tr>
+<tr class="even">
+<td>0.011</td>
+<td>Added transparency to SMode, removed Configfile backup mechanism,
+Shift + Mousewheel instead of Alt + Mousewheel</td>
+</tr>
+<tr class="odd">
+<td>0.005</td>
+<td>&quot;Hide&quot; renamed to &quot;SMode&quot;, [Right-mousebutton] both operations
+changed to &quot;toggle&quot;</td>
+</tr>
+<tr class="even">
+<td>0.002</td>
+<td>Quick-Hide mouse-hotkeys changed (hardcoded): LShift &amp; RButton
+-&gt; HIDE, LControl &amp; RButton -&gt; SHOW (NMode)</td>
+</tr>
+<tr class="odd">
+<td>0.001</td>
+<td>File-history hotkey changed to LShift &amp; WheelUp / LShift &amp;
+WheelDown</td>
+</tr>
+<tr class="even">
+<td>0.001</td>
+<td>Reset version to &quot;0.001&quot; (Upgraded Aottext from AHK1 to AHK2)</td>
+</tr>
+<tr class="odd">
+<td>0.055</td>
+<td>Fileencoding changed to UTF-8-BOM (configfile: UTF-16 LE-BOM), new
+menu entry: &quot;Insert&quot;</td>
+</tr>
+<tr class="even">
+<td>0.054</td>
+<td>Gui size not overwritten if maximized</td>
+</tr>
+<tr class="odd">
+<td>0.053</td>
+<td>Menu -&gt; setup -&gt; Autosmall</td>
+</tr>
+<tr class="even">
+<td>0.050</td>
+<td>new config entry: xPercentHidden, quickHideEnabled entry removed
+(allways &quot;on&quot; now)</td>
+</tr>
+<tr class="odd">
+<td>0.045</td>
+<td>Autosave filename changed from &quot;aottext_yyyyMMddhhmmss&quot; to
+&quot;aot_yyyyMMddhhmmss&quot;, button &quot;YmaxXr&quot;</td>
+</tr>
+<tr class="even">
+<td>0.044</td>
+<td>Lost focus bug fixed</td>
+</tr>
+<tr class="odd">
+<td>0.043</td>
+<td>Bug (did not save new content) fixed</td>
+</tr>
+<tr class="even">
+<td>0.042</td>
+<td>Always using a localized Configurationfile, i.e.
+&quot;aottext_COMPUTERNAME.ini&quot;</td>
+</tr>
+<tr class="odd">
+<td>0.041</td>
+<td>The Configurationfile -&gt; quickhideHotkey is hardcoded and not
+changeable.</td>
+</tr>
+<tr class="even">
+<td>0.040</td>
+<td>Configurationfile changed! Delete the old one, a corrected new one
+will be created automatically!</td>
+</tr>
+<tr class="odd">
+<td>0.029</td>
+<td>To trash button, moves the actual file to the &quot;_trash&quot;
+subdirectory!</td>
+</tr>
+<tr class="even">
+<td>0.028</td>
+<td>Startparameter: hidewindow and remove</td>
+</tr>
+<tr class="odd">
+<td>0.027</td>
+<td>QuickHide enabled by default</td>
+</tr>
+<tr class="even">
+<td>0.026</td>
+<td>A hotkey to hide / show the Aottext-window, Configurationfile -&gt;
+[config] -&gt; aottextHotkey, default is [Alt] + [a] (&quot;!a&quot;)</td>
+</tr>
+<tr class="odd">
+<td>0.022</td>
+<td>Configurationfile changed! Delete the old one, a corrected new one
+will be created automatically!</td>
+</tr>
+<tr class="even">
+<td>0.021</td>
+<td>Configurationfile -&gt; [config] -&gt; saveDir=&quot;absolute paths are
+allowed&quot;</td>
+</tr>
+<tr class="odd">
+<td>0.001</td>
+<td>under construction</td>
+</tr>
+</tbody>
+</table>
+<h4 id="known-issues--bugs">Known issues / bugs</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Issue / Bug</th>
+<th>Type</th>
+<th>fixed in version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shorthelp takes time to open)</td>
+<td>issue</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>Introduced a positioning bug (NMode positioning check)</td>
+<td>bug</td>
+<td>0.010</td>
+</tr>
+<tr class="odd">
+<td>Sometimes all text becomes selected and the caret-position moves to
+the end</td>
+<td>issue</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>Files must at least contain one newline!</td>
+<td>Scintilla issue</td>
+<td>0.008 (Aottext auto adds a newline)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="license-gnu-general-public-license">License: GNU GENERAL PUBLIC
+LICENSE</h4>
+<p>Please take a look at the file &quot;license.txt&quot;!</p>
+<p>Copyright (c) 2020 J. v. Roos</p>
+<h4 id="license-for-lexilla-scintilla-and-scite">License for Lexilla,
+Scintilla, and SciTE</h4>
+<p>Copyright 1998-2021 by Neil Hodgson <a href="mailto:neilh@scintilla.org">neilh@scintilla.org</a></p>
+<p>All Rights Reserved</p>
+<p>Permission to use, copy, modify, and distribute this software and its
+documentation for any purpose and without fee is hereby granted,
+provided that the above copyright notice appear in all copies and that
+both that copyright notice and this permission notice appear in
+supporting documentation.</p>
+<p>NEIL HODGSON DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+EVENT SHALL NEIL HODGSON BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF
+USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.</p>
+<p>Other parts License<br />
+&quot;SCI.ahk&quot; from:<br />
+<a href="https://github.com/RaptorX/scintilla-wrapper">https://github.com/RaptorX/scintilla-wrapper</a><br />
+Copyright by Isaias Baez<br />
+Has no License information!</p>
+<a name="virusscan">  
+
+<h5 id="virusscan-at-virustotal">Virusscan at Virustotal</h5>
+<p><a href="https://www.virustotal.com/gui/url/c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346/detection/u-c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346-1722770402">Virusscan
+at Virustotal, aottext.exe 64bit-exe, Check here</a></p>
+</body>
+</html>
