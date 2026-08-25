@@ -154,11 +154,7 @@ buttonOKFunction(*){
       saveNewConfig()
       ; makes a reload
       
-    case 3:
-      resetToActualContent()
-      MainMenu.Rename("Ok, BACK!", "SMode")
-      buttonOKfunctionSelection := 1
-    
+   
     default:
       msgbox("Error, unknown buttonOKfunctionSelection!")
   }

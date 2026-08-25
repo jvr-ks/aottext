@@ -100,18 +100,20 @@ insertValue(p, p1, *){
 }
 ;----------------------------- displayParamShow -----------------------------
 displayParamShow(*){
-  global 
+  global
+  local clSave
   
   saveIfChanged()
   
   s := "Screenwidth: " . A_ScreenWidth . ", Screenheight: " . A_ScreenHeight . "`n"
   s .= "Screen-DPI: " . A_ScreenDPI . ", dpi-Scale: " . dpiScaleDefault . ", dpi-Correct: " . dpiCorrect
-
-  setTextToGuiMainEdit(s)
-  guiMainEdit.Focus()
   
-  buttonOKfunctionSelection := 3
-  MainMenu.Rename("SMode", "Ok, BACK!")
+  clSave := ClipboardAll()
+  msgBox("Clipboard:`n`n" . s)
+  A_Clipboard := clSave
+  ToolTip("Clipboard restored, now contains: `n`n" . A_Clipboard)
+  settimer () => ToolTip(), 4000
+  guiMainEdit.Focus()
 }
 ;------------------------------ openGithubPage ------------------------------
 openGithubPage(*){
