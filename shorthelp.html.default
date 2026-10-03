@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Shorthelp</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">html {color: #1a1a1a;background-color: #fdfdfd;}body {margin: 0 auto;padding-left: 20px;padding-right: 20px;padding-top: 20px;padding-bottom: 20px;hyphens: auto;overflow-wrap: break-word;text-rendering: optimizeLegibility;font-kerning: normal;h1 {font-size: 1.2em;}}@media (max-width: 600px) {body {font-size: 0.9em;padding: 12px;}h1 {font-size: 1.8em;}}@media print {html {background-color: white;}body {background-color: transparent;color: black;font-size: 12pt;}p, h2, h3 {orphans: 3;widows: 3;}h2, h3, h4 {page-break-after: avoid;}}p {margin: 1em 0;}a {color: #1a1a1a;}a:visited {color: #1a1a1a;}img {max-width: 100%;}h1, h2, h3, h4, h5, h6 {margin-top: 0.4em;}h5, h6 {font-size: 1em;font-style: italic;}h6 {font-weight: normal;}ol, ul {padding-left: 1.7em;margin-top: 1em;}li > ol, li > ul {margin-top: 0;}blockquote {margin: 1em 0 1em 1.7em;padding-left: 1em;border-left: 2px solid #e6e6e6;color: #606060;}code {font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;font-size: 85%;margin: 0;hyphens: manual;}pre {margin: 1em 0;overflow: auto;}pre code {padding: 0;overflow: visible;overflow-wrap: normal;}.sourceCode {background-color: transparent;overflow: visible;}hr {background-color: #1a1a1a;border: none;height: 1px;margin: 1em 0;}table {margin: 1em 0;border-collapse: collapse;width: 100%;overflow-x: auto;display: block;font-variant-numeric: lining-nums tabular-nums;}table caption {margin-bottom: 0.75em;}tbody {margin-top: 0.5em;border-top: 1px solid #1a1a1a;border-bottom: 1px solid #1a1a1a;}th {border-top: 1px solid #1a1a1a;padding: 0.25em 0.5em 0.25em 0.5em;}td {padding: 0.125em 0.5em 0.25em 0.5em;}header {margin-bottom: 4em;text-align: center;}#TOC li {list-style: none;}#TOC ul {padding-left: 1.3em;}#TOC > ul {padding-left: 0;}#TOC a:not(:hover) {text-decoration: none;}code{white-space: pre-wrap;}span.smallcaps{font-variant: small-caps;}div.columns{display: flex; gap: min(4vw, 1.5em);}div.column{flex: auto; overflow-x: auto;}div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}ul.task-list{list-style: none;}ul.task-list li input[type="checkbox"] {width: 0.8em;margin: 0 0.8em 0.2em -1.6em;vertical-align: middle;}.display.math{display: block; text-align: center; margin: 0.5rem auto;}table{background-color:#fafafa}table tr td,.haroopad table tr th{border:1px solid #e6e6e6}table tr:nth-child(2n){background-color:#f2f2f2}h1 {font-size: 20px;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Shorthelp</h1>
+</header>
+<h2 id="aottext-short-help">Aottext Short-help</h2>
+<h4 id="purpose-of-aottext">Purpose of Aottext</h4>
+<p>Aottext (Aot means always on top) was made to save pieces of text, a
+little like a single Sticky-note.<br />
+The text can be shown in 3 different window positions.<br />
+Example of usage:</p>
+<ul>
+<li>horizontally oriented window</li>
+<li>vertically oriented window</li>
+<li>a small window as the &quot;hidden&quot; position</li>
+<li>totally hidden<br />
+The entered content is saved automatically, the filename is constructed
+from date/time.</li>
+</ul>
+<h4 id="aottext-usage">Aottext usage</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Key(s) / Button</th>
+<th>Operation</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[SMode] button</td>
+<td>&quot;small&quot; position</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>[NMode] button</td>
+<td>&quot;normal&quot; position</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>[VMode] button</td>
+<td>&quot;vertical&quot; position</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>[Exit] button</td>
+<td>close the app (content is auto-saved) and reopen it later. :-)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>[Mouseover] edit field</td>
+<td>return to &quot;NMode&quot;</td>
+<td>if &quot;SMode&quot; is active</td>
+</tr>
+<tr class="even">
+<td>[Left-shift] + [Right-mousebutton]</td>
+<td>toggle &quot;NMode&quot; - &quot;SMode&quot;</td>
+<td>pressed anywere on the screen</td>
+</tr>
+<tr class="odd">
+<td>[Alt] + [Right-mousebutton]</td>
+<td>toggle &quot;NMode&quot; - &quot;VMode&quot;</td>
+<td>pressed anywere on the screen</td>
+</tr>
+<tr class="even">
+<td>[Alt] + [a]</td>
+<td>toggle hide/show Aottext</td>
+<td>always returns to &quot;NMode&quot;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hide-the-aottext-window-autosmall">Hide the Aottext window:
+Autosmall</h4>
+<p>If &quot;Settings&quot; -&gt; &quot;Enable Autosmall&quot; is selected,<br />
+the Aottext-window is automatically moved/resized to the
+&quot;hidden&quot;-position,<br />
+if it is <strong>out of focus</strong>.</p>
+<h4 id="content-autosave">Content autosave</h4>
+<p>Content is saved (if it was changed only!) and:</p>
+<ul>
+<li>on any &quot;hide&quot;-operation,</li>
+<li>on exiting the app.</li>
+<li>by pressing the &quot;Op -&gt; Save&quot; button, the content is always saved,
+regardless of whether it has been changed.</li>
+</ul>
+<h4 id="file-history">File history</h4>
+<p>Use [Shift] + [Mousewheel] to cycle thru the history (if the
+Aottext-window has the focus!).</p>
+<h4 id="vmode-button">VMode-button</h4>
+<p>VMode moves the Aottext-window to the VMode-position, I use the right
+screen side and a verical oriented window.<br />
+Gives a better overview, if you want to copy multible lines of text.</p>
+<h4 id="smode-and-exit">SMode and EXIT</h4>
+<p>Are context sensitiv buttons.<br />
+If menu [Op] -&lt; [Settings] -&lt; [Edit Config] is selected, the
+functionallity is chanced to &quot;SAVE&quot; and &quot;CANCEL&quot;.</p>
+</body>
+</html>
