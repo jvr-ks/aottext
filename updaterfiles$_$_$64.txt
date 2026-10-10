@@ -1,0 +1,11 @@
+aottext.exe,yes,overwrite
+aottext.ini,no
+aottext.ico,no
+license.txt,no
+scintilla.dll,yes,overwrite
+lexer.dll,yes,overwrite
+shorthelp.html,yes,overwrite
+readme.html,yes,overwrite
+insertUnicode.txt,yes
+aot_20000101000000.txt,yes,,saved
+
