@@ -202,8 +202,9 @@ buttonOKFunction(*){
 NModeAction(*){
   global
 
+  disableChangesStore()
   guiMainMode := 0
-  inhibit := 1
+  
   ; move to normal position
   guiMain.move(guiMainPosX, guiMainPosY, guiMainWidth, guiMainHeight)
   mainEditWidth := (guiMainClientWidth - paddingLeft - paddingRight)
@@ -211,16 +212,18 @@ NModeAction(*){
   guiMainEdit.Move(,, mainEditWidth, mainEditHeight)
   WinSetTransparent "off", "Aottext"
   sleep 100
-  inhibit := 0
+  
   WinActivate("Aottext")
   setNoWrap()
+  enableChangesStore()
 }
 ;-------------------------------- VModeAction --------------------------------
 VModeAction(*){
   global 
   
+  disableChangesStore()
   guiMainMode := 1
-  inhibit := 1
+
   ; move to VMode position
   guiMain.move(guiMainVModePosX, guiMainVModePosY, guiMainVModeWidth, guiMainVModeHeight)
   mainEditVModeWidth := (guiMainClientVModeWidth - paddingLeft - paddingRight)
@@ -228,17 +231,18 @@ VModeAction(*){
   guiMainEdit.Move(,, mainEditVModeWidth, mainEditVModeHeight)
   WinSetTransparent "off", "Aottext"
   sleep 100
-  inhibit := 0
   WinActivate("Aottext")
   setNoWrap()
+  enableChangesStore()
 }
 ;------------------------------- SModeAction -------------------------------
 SModeAction(*){
   global
 
+  disableChangesStore()
   saveIfChanged()
   guiMainMode := 2
-  inhibit := 1
+
   ; move to SMode position
   guiMain.move(guiMainSModePosX, guiMainSModePosY, guiMainSModeWidth, guiMainSModeHeight)
   mainEditWidth := (guiMainClientSModeWidth - paddingLeft - paddingRight)
@@ -246,33 +250,35 @@ SModeAction(*){
   guiMainEdit.Move(,, mainEditWidth, mainEditHeight)
   WinSetTransparent smodeTransparency, "Aottext"
 
-  inhibit := 0
   setNoWrap()
+  enableChangesStore()
 }
 
 ;------------------------------- FsModeAction -------------------------------
 FsModeAction(*){
   global
 
+  disableChangesStore()
   guiMainMode := 3
-  inhibit := 1
+
   ; move to fullscreen position
   guiMain.move(guiMainFsModePosX, guiMainFsModePosY, guiMainFsModeWidth, guiMainFsModeHeight)
   mainEditWidth := (guiMainClientFsModeWidth - paddingLeft - paddingRight)
   mainEditHeight := (guiMainClientFsModeHeight - paddingBottom - paddingTop)
   guiMainEdit.Move(,, mainEditWidth, mainEditHeight)
   WinSetTransparent "off", "Aottext"
-
   sleep 100
-  inhibit := 0
+
   WinActivate("Aottext")
   setNoWrap()
+  enableChangesStore()
 }
 ;-------------------------------- saveConfig --------------------------------
 saveNewConfig(*){
   global
   
-  inhibit := 1
+  disableChangesStore()
+
   FileDelete(configFile)
   FileAppend(guiMainEdit.Text, configFile, "UTF-8-RAW `n")
   
@@ -289,9 +295,10 @@ saveNewConfig(*){
 ;------------------------------ moveEventSwitch ------------------------------
 moveEventSwitch(p1, p2, p3, p4, *){
   global
+  
   local h1, h2, h3
   
-  if (inhibit)
+  if (inhibitMoveChange)
     return
   
   h1 := 0, h2 := 0, h3 := 0
@@ -328,10 +335,7 @@ guiMain_Size(thisGui, MinMax, clientWidth, clientHeight) {
   
   if (MinMax = -1 || MinMax = 1)
       return
-  
-  if (inhibit)
-    return
-    
+   
   guiMain.GetPos(&posX, &posY, &Width, &Height)
     
   switch guiMainMode {
@@ -420,7 +424,7 @@ guiMain_Move(){
   global
   local debugMsg1
   
-  if (inhibit)
+  if (inhibitMoveChange)
     return
     
   guiMain.GetPos(&posX, &posY)
@@ -645,12 +649,14 @@ saveAsNew(*){
 checkFocus(){
   global 
   local h
-  
+ 
   if (autosmall){
     h := WinActive("A")
-    if (guiMainHwnd != h)
-      if (guiMainMode != 2)
+    if (guiMainHwnd != h){
+      if (guiMainMode != 2){
         SModeAction()
+      }
+    }
   }
 }
 ;--------------------------------- winmerge ---------------------------------

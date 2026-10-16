@@ -6,8 +6,6 @@
 initGlobalVariables(){
   global
   
-  inhibit := 0
-  
   guiMainMode := 0 ; 0 = normal mode, 1 = vertical mode, 2 = SMode mode, 3 = FsMode,  4 = hidden
 
   ; create a default layout

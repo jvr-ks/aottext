@@ -141,13 +141,13 @@ setAutosmall(){
   
   if (autosmall){
     MainMenuSettings.Check("Autosmall")
-    guiMain.Opt("+E0x00000080")
+    ;guiMain.Opt("+E0x00000080")
     SetTimer(checkFocus, 0)
     SetTimer(checkFocus, 3000)
   } else {
     MainMenuSettings.Uncheck("Autosmall")
     SetTimer(checkFocus, 0)
-    guiMain.Opt("-E0x00000080")
+    ;guiMain.Opt("-E0x00000080")
   }
   updateMainSB()
 }
