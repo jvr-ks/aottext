@@ -107,7 +107,7 @@ displayParamShow(*){
   msgBox("Clipboard:`n`n" . s)
   A_Clipboard := clSave
   ToolTip("Clipboard restored, now contains: `n`n" . A_Clipboard)
-  settimer () => ToolTip(), 4000
+  settimer () => tooltip(), -4000
   guiMainEdit.Focus()
 }
 

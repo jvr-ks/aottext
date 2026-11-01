@@ -151,7 +151,7 @@ historyFoward(*) {
       wheelPosition := allfilesMaxCount
       MouseGetPos &xActuPos, &yActuPos
       ToolTip("most recent file", xActuPos + 40, yActuPos + 20)
-      settimer () => tooltip(), 4000
+      settimer () => tooltip(), -4000
     }
     
     updateMainSB()
@@ -179,7 +179,7 @@ historyFoward10(*) {
       wheelPosition := allfilesMaxCount
       MouseGetPos &xActuPos, &yActuPos
       ToolTip("most recent file", xActuPos + 40, yActuPos + 20)
-      settimer () => tooltip(), 4000
+      settimer () => tooltip(), -4000
     }
     
     updateMainSB()
@@ -204,7 +204,7 @@ historyFowardFirst(*) {
     wheelPosition := allfilesMaxCount
     MouseGetPos &xActuPos, &yActuPos
     ToolTip("most recent file", xActuPos + 40, yActuPos + 20)
-    settimer () => tooltip(), 4000
+    settimer () => tooltip(), -4000
     
     updateMainSB()
     if (allfiles.Has(wheelPosition)){
@@ -237,7 +237,7 @@ historyBackward(*) {
       if (wheelPosition = 1){
         MouseGetPos &xActuPos, &yActuPos
         ToolTip("first file!", xActuPos + 40, yActuPos + 20)
-        settimer () => tooltip(), 4000
+        settimer () => tooltip(), -4000
       }
     } else {
       showHintColored("No file number " . wheelPosition . " not found in: " . selectedFolder)
@@ -265,7 +265,7 @@ historyBackward10(*) {
       if (wheelPosition = 1){
         MouseGetPos &xActuPos, &yActuPos
         ToolTip("first file!", xActuPos + 40, yActuPos + 20)
-        settimer () => tooltip(), 4000
+        settimer () => tooltip(), -4000
       }
     } else {
       showHintColored("No file number " . wheelPosition . " not found in: " . selectedFolder)
@@ -291,7 +291,7 @@ historyBackwardFirst(*) {
       if (wheelPosition = 1){
         MouseGetPos &xActuPos, &yActuPos
         ToolTip("first file!", xActuPos + 40, yActuPos + 20)
-        settimer () => tooltip(), 4000
+        settimer () => tooltip(), -4000
       }
     } else {
       showHintColored("No file number " . wheelPosition . " not found in: " . selectedFolder)
