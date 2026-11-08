@@ -222,6 +222,7 @@ NModeAction(*){
   mainEditWidth := (guiMainClientWidth - paddingLeft - paddingRight)
   mainEditHeight := (guiMainClientHeight - paddingBottom - paddingTop)
   guiMainEdit.Move(,, mainEditWidth, mainEditHeight)
+  setAOT()
   
   if (autosmall){
     SetTimer(checkFocus, 0)
@@ -241,6 +242,7 @@ VModeAction(*){
   mainEditVModeWidth := (guiMainClientVModeWidth - paddingLeft - paddingRight)
   mainEditVModeHeight := (guiMainClientVModeHeight - paddingBottom - paddingTop)
   guiMainEdit.Move(,, mainEditVModeWidth, mainEditVModeHeight)
+  setAOT()
   guiMain.Restore
 }
 ;------------------------------- SModeAction -------------------------------
@@ -257,6 +259,7 @@ SModeAction(*){
   mainEditHeight := (guiMainClientSModeHeight - paddingBottom - paddingTop)
   guiMainEdit.Move(,, mainEditWidth, mainEditHeight)
   WinSetTransparent smodeTransparency, "Aottext"
+  setAOT()
   guiMain.Restore
 }
 ;------------------------------- FsModeAction -------------------------------
@@ -271,6 +274,8 @@ FsModeAction(*){
   mainEditWidth := (guiMainClientFsModeWidth - paddingLeft - paddingRight)
   mainEditHeight := (guiMainClientFsModeHeight - paddingBottom - paddingTop)
   guiMainEdit.Move(,, mainEditWidth, mainEditHeight)
+  ; force "-alwaysontop"
+  guiMain.Opt("-alwaysontop")
   guiMain.Restore
 }
 ;-------------------------------- saveConfig --------------------------------

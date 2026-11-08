@@ -48,8 +48,8 @@ generateMainMenu(){
   MainMenuSettings.Add("NoWrapNMode", toggleNoWrapNMode, "Radio")
   MainMenuSettings.Add("NoWrapSMode", toggleNoWrapSMode, "Radio")
   MainMenuSettings.Add("NoWrapVMode", toggleNoWrapVMode, "Radio")
+  MainMenuSettings.Add("NoWrapFsMode", toggleNoWrapFsMode, "Radio")
   MainMenuSettings.Add()
-
  }
 ;------------------------------ readInsertable ------------------------------
 readInsertable(){
@@ -208,6 +208,13 @@ toggleNoWrapVMode(*){
   nowrapVMode := !nowrapVMode
   setNoWrap()
 }
+;---------------------------- toggleNoWrapFsMode ----------------------------
+toggleNoWrapFsMode(*){
+  global 
+  
+  nowrapFsMode := !nowrapFsMode
+  setNoWrap()
+}
 ;--------------------------------- setNoWrap ---------------------------------
 setNoWrap(){
   global
@@ -215,6 +222,7 @@ setNoWrap(){
   MainMenuSettings.Uncheck("NowrapNMode")
   MainMenuSettings.Uncheck("NowrapSMode")
   MainMenuSettings.Uncheck("NowrapVMode")
+  MainMenuSettings.Uncheck("NowrapFsMode")
   
   if (nowrapNMode)
     MainMenuSettings.Check("NowrapNMode")
@@ -222,17 +230,18 @@ setNoWrap(){
     MainMenuSettings.Check("NowrapSMode")
   if (nowrapVMode)
     MainMenuSettings.Check("NowrapVMode")
+  if (nowrapFsMode)
+    MainMenuSettings.Check("NowrapFsMode")
         
   switch guiMainMode {
     case 0:
       guiMainEdit.Wrap.Mode := !nowrapNMode
-  
+    case 1:
+      guiMainEdit.Wrap.Mode := !nowrapVMode  
     case 2:
       guiMainEdit.Wrap.Mode := !nowrapSMode
-
-    case 1:
-      guiMainEdit.Wrap.Mode := !nowrapVMode
-
+    case 3:
+      guiMainEdit.Wrap.Mode := !nowrapFsMode
   }
 }
 ;-------------------------------- updateApp --------------------------------

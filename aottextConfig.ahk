@@ -23,10 +23,10 @@ readConfig(){
   autosmall := IniRead(configFile, "user", "autosmall", autosmallDefault)
   smodeAutoleave := IniRead(configFile, "user", "smodeAutoleave", smodeAutoleaveDefault)
   
-  nowrapNMode := IniRead(configFile, "user", "nowrnowrapNMode", nowrapNModeDefault)
-  nowrapVMode := IniRead(configFile, "user", "nowrnowrapNMode", nowrapVModeDefault)
-  nowrapSMode := IniRead(configFile, "user", "nowrnowrapNMode", nowrapSModeDefault)
-  nowrapFsMode := IniRead(configFile, "user", "nowrnowrapNMode", nowrapFsModeDefault)
+  nowrapNMode := IniRead(configFile, "user", "nowrapNMode", nowrapNModeDefault)
+  nowrapVMode := IniRead(configFile, "user", "nowrapVMode", nowrapVModeDefault)
+  nowrapSMode := IniRead(configFile, "user", "nowrapSMode", nowrapSModeDefault)
+  nowrapFsMode := IniRead(configFile, "user", "nowrapFsMode", nowrapFsModeDefault)
 
   wheelPosition := IniRead(configFile, "user", "wheelPosition", 1)
   
@@ -67,6 +67,7 @@ saveConfig(){
   IniWrite nowrapNMode, configFile, "user", "nowrapNMode"
   IniWrite nowrapSMode, configFile, "user", "nowrapSMode"
   IniWrite nowrapVMode, configFile, "user", "nowrapVMode"
+  IniWrite nowrapFsMode, configFile, "user", "nowrapFsMode"
   
 }
 ;-------------------------------- readGuiData --------------------------------

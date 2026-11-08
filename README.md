@@ -13,6 +13,7 @@ Content are "Dingbats" Unicode characters displayed with: [UnicodeTable](https:/
 #### Latest changes:  
 Version (&gt;=) | Change  
 ------------ | -------------  
+0.045 | In Fullscreen mode (FsMode) always on top (AOT) makes no sense and is ignored  
 0.044 | "Autosmall" applies only to "NMode" 
 0.043 | *\[ALT] + \[a]* Hide/Show Aottext is usable in any mode 
 0.039 | New Updater version  
@@ -290,5 +291,5 @@ Has no License information!
 
 
 ##### Virusscan at Virustotal 
-[Virusscan at Virustotal, aottext.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346/detection/u-c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346-1794130194
+[Virusscan at Virustotal, aottext.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346/detection/u-c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346-1794133659
 )  
