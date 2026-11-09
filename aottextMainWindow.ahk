@@ -30,9 +30,8 @@ mainWindow(hide := 0) {
   MainMenu.Add("Exit", exitFunction) ; Exit / Cancel
   MainMenu.Add("Insert", MainMenuInsert)
 
-  ; -0x30000 -> not minimizable, +E0x08000000 -> view only
   guiMain := Gui("+Lastfound +OwnDialogs +Resize +AlwaysOnTop -0x30000" , app, guiMainEvents)
-  ;guiMain.Opt("-E0x00000080")
+  guiMainHWND := guiMain.hwnd
   
   if (!alwaysontop)
     WinSetAlwaysOnTop 0
@@ -108,7 +107,7 @@ mainWindow(hide := 0) {
   OnMessage(0x03, moveEventSwitch)
   
   WinMaximize "ahk_id " guiMainHwnd
-  WinRestore "ahk_id " guiMainHwnd
+  WinRestore "ahk_id " guiMainHwnd ; triggers a size event
   
   guiMain.Show
 }
@@ -135,34 +134,6 @@ class guiMainEvents
         ToolTip
         MsgBox Format(this.MessageFormat, Ctrl.Text)
     }
-}
-;----------------------------- triggerSizeEvent -----------------------------
-triggerSizeEvent_1(){
-  global
-  
-  WinMaximize "ahk_id " guiMainHwnd
-  WinRestore "ahk_id " guiMainHwnd
-
-}
-triggerSizeEvent2() {
-  guiMain_Size(guiMain, 0,
-      guiMainClientSModeWidth,
-      guiMainClientSModeHeight)
-}
-
-triggerSizeEvent(){
-
-}
-
-triggerSizeEventSmall() {
-  global
-  
-  guiMain.Hide
-  sleep 300
-  WinMaximize "ahk_id " guiMainHwnd
-  WinRestore "ahk_id " guiMainHwnd
-  guiMain.Show
-  
 }
 ;------------------------------- updateMainSB -------------------------------
 updateMainSB(){
@@ -222,6 +193,7 @@ NModeAction(*){
   mainEditWidth := (guiMainClientWidth - paddingLeft - paddingRight)
   mainEditHeight := (guiMainClientHeight - paddingBottom - paddingTop)
   guiMainEdit.Move(,, mainEditWidth, mainEditHeight)
+  WinSetTransparent("Off", guiMain.hwnd)
   setAOT()
   
   if (autosmall){
@@ -242,6 +214,7 @@ VModeAction(*){
   mainEditVModeWidth := (guiMainClientVModeWidth - paddingLeft - paddingRight)
   mainEditVModeHeight := (guiMainClientVModeHeight - paddingBottom - paddingTop)
   guiMainEdit.Move(,, mainEditVModeWidth, mainEditVModeHeight)
+  WinSetTransparent("Off", guiMain.hwnd)
   setAOT()
   guiMain.Restore
 }
@@ -258,7 +231,7 @@ SModeAction(*){
   mainEditWidth := (guiMainClientSModeWidth - paddingLeft - paddingRight)
   mainEditHeight := (guiMainClientSModeHeight - paddingBottom - paddingTop)
   guiMainEdit.Move(,, mainEditWidth, mainEditHeight)
-  WinSetTransparent smodeTransparency, "Aottext"
+  WinSetTransparent(smodeTransparency, guiMain.hwnd)
   setAOT()
   guiMain.Restore
 }
@@ -276,6 +249,7 @@ FsModeAction(*){
   guiMainEdit.Move(,, mainEditWidth, mainEditHeight)
   ; force "-alwaysontop"
   guiMain.Opt("-alwaysontop")
+  WinSetTransparent("Off", guiMain.hwnd)
   guiMain.Restore
 }
 ;-------------------------------- saveConfig --------------------------------
@@ -658,10 +632,8 @@ checkFocus(*){
   if (autosmall){
     h := WinActive("A")
     if (guiMainHwnd != h && guiMainMode = 0){
-;      if (guiMainMode != 2 && guiMainMode != 4){
       SetTimer(checkFocus, 0)
       SModeAction()
-;      }
     }
   }
 }

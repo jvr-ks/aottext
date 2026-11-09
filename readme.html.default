@@ -48,39 +48,44 @@ Content are &quot;Dingbats&quot; Unicode characters displayed with: <a href="htt
 </thead>
 <tbody>
 <tr class="odd">
-<td>0.044</td>
-<td>Autosmall is active in Normal Mode only</td>
+<td>0.045</td>
+<td>In Fullscreen mode (FsMode) always on top (AOT) makes no sense and
+is ignored</td>
 </tr>
 <tr class="even">
 <td>0.044</td>
-<td><em>[ALT] + [a]</em> Hide/Show Aottext is usable in any mode</td>
+<td>&quot;Autosmall&quot; applies only to &quot;NMode&quot;</td>
 </tr>
 <tr class="odd">
+<td>0.043</td>
+<td><em>[ALT] + [a]</em> Hide/Show Aottext is usable in any mode</td>
+</tr>
+<tr class="even">
 <td>0.039</td>
 <td>New Updater version</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.032</td>
 <td>Action -&gt; WinMerge support added</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.029</td>
 <td>New file navigation buttons</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.026</td>
 <td>History buttons, menu chances, bug fixes</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.023</td>
 <td>Fullscreen mode (FsMode) introduced</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.022</td>
 <td>Shorthelp and Readme opens in local default browser (internal HTML
 viewer is very slow)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.021</td>
 <td>Source code useble with AKH 2.029</td>
 </tr>
@@ -496,7 +501,7 @@ Has no License information!</p>
 <a name="virusscan">  
 
 <h5 id="virusscan-at-virustotal">Virusscan at Virustotal</h5>
-<p><a href="https://www.virustotal.com/gui/url/c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346/detection/u-c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346-1794130194">Virusscan
+<p><a href="https://www.virustotal.com/gui/url/c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346/detection/u-c44ffbba37e4b31eb4a11ff3a8235bfb66f64292c3749d6195ba38c8e2b42346-1794133659">Virusscan
 at Virustotal, aottext.exe 64bit-exe, Check here</a></p>
 </body>
 </html>
